@@ -1,11 +1,10 @@
+// grabing all panels / image
 const allPanels = document.querySelectorAll(".panel");
-
-console.log(allPanels);
 
 // Looping through all classes of panel to add events
 allPanels.forEach((panel) => {
   // adding click event listener
-  panel.addEventListener("click", () => {
+  panel.addEventListener("mouseover", () => {
     // remove previous image/panel active class
     removePreviousActiveClass();
     // add active class to clicked panel/image
@@ -15,7 +14,8 @@ allPanels.forEach((panel) => {
 
 // Function to remove active class
 function removePreviousActiveClass() {
-  panels.forEach((panel) => {
+  // looping through all panels
+  allPanels.forEach((panel) => {
     panel.classList.remove("active");
   });
 }
