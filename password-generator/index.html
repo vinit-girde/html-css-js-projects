@@ -4,6 +4,63 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <main class="card">
+      <h1>Password Generator</h1>
+      <p>Create a secure password and copy it instantly.</p>
+
+      <div class="password-wrapper">
+        <input
+          id="passwordOutput"
+          type="text"
+          readonly
+          aria-label="Generated password"
+        />
+        <div class="action-buttons">
+          <button id="clearBtn" class="icon-btn" aria-label="Clear password">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M3 6h18"></path>
+              <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+              <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path>
+              <path d="M10 11v6"></path>
+              <path d="M14 11v6"></path>
+            </svg>
+          </button>
+          <button
+            id="copyBtn"
+            class="icon-btn copy-btn"
+            aria-label="Copy password"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path
+                d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <button id="generateBtn" class="generate-btn">Generate Password</button>
+      <div id="status" class="status" aria-live="polite"></div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
 </html>

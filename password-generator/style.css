@@ -1,6 +1,115 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #f8fafc;
+}
+
+.card {
+  width: min(92vw, 480px);
+  background: rgba(15, 23, 42, 0.88);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.35);
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+p {
+  margin: 0 0 20px;
+  text-align: center;
+  color: #cbd5e1;
+}
+
+.password-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border: 2px solid #38bdf8;
+  border-radius: 14px;
+  background: #020617;
+}
+
+.password-wrapper input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #f8fafc;
+  font-size: 1rem;
+  padding: 8px 10px;
+}
+
+.icon-btn,
+.generate-btn {
+  border: none;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.icon-btn:hover,
+.generate-btn:hover {
+  transform: translateY(-1px);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #1d4ed8;
+  color: white;
+  display: grid;
+  place-items: center;
+}
+
+#clearBtn {
+  background: #b91c1c;
+}
+
+.icon-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.generate-btn {
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.status {
+  min-height: 20px;
+  margin-top: 10px;
+  text-align: center;
+  color: #86efac;
+  font-size: 0.95rem;
 }
